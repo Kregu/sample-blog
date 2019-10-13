@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+field_with_error input {
+    border-color: red;
+}
+field_with_error textarea {
+    border-color: red;
+}
+
