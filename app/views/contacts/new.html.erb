@@ -5,7 +5,7 @@
 	<% if @contact && @contact.errors.any? %>
 	<p> 
 		<ul>
-		<% @contact.errors.full.messages.each do |msg| %>
+ 		<% @contact.errors.full_messages.each do |msg| %>
 			<li><%= msg %></li>
 		<%end%>
 		</ul>
