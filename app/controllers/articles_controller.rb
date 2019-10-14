@@ -3,6 +3,12 @@ class ArticlesController < ApplicationController
   def new
   end
 
+  def show
+  end
+
+  def index
+  end
+
   def create
     # render plain: params[:article].inspect
 
@@ -18,7 +24,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title,:text)
+    params.require(:article).permit(:title, :text)
 
   end
 
