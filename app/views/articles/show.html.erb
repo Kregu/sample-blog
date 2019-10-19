@@ -2,3 +2,21 @@
 <p><%= @article.text %></p>
 
 <%= link_to 'Show all articles!', articles_path %>
+
+<!-- For resource has assotiation defined use 'form_for([@document, @comment]) do |f|'
+@article.comments.build return new object of the collection, but has not been saved -->
+
+<%= form_for ([@article, @article.comments.build]) do |f| %>
+	<p>
+		<%= f.label :aurhor %><br>
+		<%= f.text_field :author %>
+	</p>
+	<p>
+		<%= f.label :body %><br>
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>
