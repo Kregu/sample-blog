@@ -8,6 +8,8 @@
   	<%= article.text %>
   <br>
   <span style="font-size: 75%; color: 999"> Added at <%= article.created_at %></span>
+  <br>
+  <i> From, <%= (@users.find(article.user_id)).username %></i>
   </p>
   <p> 
   	<%= link_to 'Show', article_path(article) %> | 

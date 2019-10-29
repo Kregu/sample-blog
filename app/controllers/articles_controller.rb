@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
+    @users = User.all
   end
 
   def new
@@ -10,12 +11,14 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @users = User.all
   end
 
   def create
     # render plain: params[:article].inspect
 
     @article = Article.new(article_params)
+    @article.user_id = current_user.id
 
     if @article.save
       redirect_to @article
