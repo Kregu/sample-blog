@@ -52,12 +52,6 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <% if user_signed_in? %>
-            Hello, <%= current_user.username %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-          <%else%>
-            <%= link_to 'Sign In', new_user_session_path %>
-          <%end%><br>
-          <%= link_to 'New article', new_article_path if user_signed_in?%>
 
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
