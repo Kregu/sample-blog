@@ -1,4 +1,4 @@
-<h1><%= @article.title %></h1>
+<h3><%= @article.title %></h3>
 <p><%= @article.text %></p>
 
 <%= link_to 'Back', articles_path %>
@@ -7,10 +7,6 @@
 @article.comments.build return new object of the collection, but has not been saved -->
 
 <%= form_for ([@article, @article.comments.build]) do |f| %>
-	<p>
-		<%= f.label :aurhor %><br>
-		<%= f.text_field :author %>
-	</p>
 	<p>
 		<%= f.label :comment %><br>
 		<%= f.text_area :body %>
@@ -24,9 +20,9 @@
 
 <% @article.comments.each do |comment| %>
 
-  <h2>
+  <b>
   	<%= comment.author %>
-  </h2>
+  </b>
   <p>
   	<%= comment.body %>
   </p>
