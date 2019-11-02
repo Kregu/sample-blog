@@ -1,11 +1,19 @@
-  <h3><%= link_to article.title, article_path(article) %></h3>
+  <article class="post">
+  <section class="article_head">
+    <h3><%= link_to article.title, article_path(article) %></h3>
+       <p><span style="font-size: 75%; color: 999">
+      Added at <%= article.created_at.to_date.strftime("%d %B, %Y") %> by <%= (@users.find(article.user_id)).username %>
+    
 
-  <p><span style="font-size: 75%; color: 999">
-    Added at <%= article.created_at %> by <%= (@users.find(article.user_id)).username %>
-  </span></p>
-
-  <p><% if user_signed_in?%>
+    <% if user_signed_in?%>
       <%= link_to 'Edit', edit_article_path(article) %> | 
       <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%end%></p>
+    <%end%></span></p>  
   <hr>
+  </section>
+
+  </article>
+  
+
+
+
