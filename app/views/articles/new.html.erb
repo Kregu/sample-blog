@@ -1,18 +1,4 @@
 <h2>New article</h2>
 
-<%= form_for :article, url: articles_path do |f| %>
-	<div class="form-group">
-		<%= f.label :title %><br>
-		<%= f.text_field :title, class: "form-control"%>
-	</div>
+<%= render 'form'%>
 
-	<div class="form-group">
-		<%= f.label :text %><br>
-		<%= f.text_area :text, class: "form-control" %>
-	</div>
-
-	<div class="form-group">
-		<%= f.submit class: "btn btn-primary"%>
-		<%= link_to "Back", :back, class: "btn btn-outline-secondary"%>
-	</div>
-<% end %>

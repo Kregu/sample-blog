@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def show
@@ -19,9 +20,9 @@ class ArticlesController < ApplicationController
     @article.user_id = current_user.id
 
     if @article.save
-      redirect_to @article
+      redirect_to @article, success: 'Article create successfully'
     else
-      render :new
+      render :new, danger: 'Article not created'
     end
   end
 
@@ -30,15 +31,15 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to @article, success: 'Article updated successfully'
     else
-      render :edit
+      render :edit, danger: 'Article not udated'
     end
   end
 
   def destroy
     @article.destroy
-    redirect_to articles_path
+    redirect_to articles_path, success: 'Article delete successfully'
   end
 
   private
