@@ -1,32 +1,11 @@
-<h3><%= @article.title %></h3>
-<p><%= @article.text %></p>
+<p><strong>Article: </strong><%= @article.title %></p>
+<p><strong>Text: </strong>	<%= @article.text %></p>
 
 <!-- For resource has assotiation defined use 'form_for([@document, @comment]) do |f|'
 @article.comments.build return new object of the collection, but has not been saved -->
 
-<%= form_for ([@article, @article.comments.build]) do |f| %>
-	<p>
-		<%= f.label :comment %><br>
-		<%= f.text_area :body, class: "form-control" %>
-	</p>
-	<p>
-		<%= f.submit class: "btn btn-primary"%>
-		<%= link_to "Back", :back, class: "btn btn-outline-secondary"%>
-	</p>
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
 
-<% end %>
-
-
-<% @article.comments.each do |comment| %>
-
-	<p><%= comment.body %></p>
-
-  	<p><span style="font-size: 75%; color: 999">
-    Added at <%= comment.created_at%> by <%= comment.author %>
-  	</span>
-	</p>
-
-  <hr>
-
-
-<% end %>
+<h2>Comments</h2><br>
+<%= render @article.comments %>

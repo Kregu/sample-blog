@@ -1,6 +1,6 @@
 <% if @article.errors.any? %>
 	<div class="alert alert-danger">
-		<h5><%= t('common.errors')%></h5>
+		<h5><%= pluralize(@article.errors.count, "Error") %> prohibited this article from being saved:</h5>
 		<ul>
 			<% @article.errors.full_messages.each do |message| %>
 			<li><%= message%></li>
@@ -9,7 +9,7 @@
 	</div>
 <%end%>
 
-<%= form_for :article, url: articles_path do |f| %>
+<%= form_with model: @article, local: true do |f| %>
 	<div class="form-group">
 		<%= f.label :title %><br>
 		<%= f.text_field :title, class: "form-control"%>
@@ -22,6 +22,6 @@
 
 	<div class="form-group">
 		<%= f.submit class: "btn btn-primary"%>
-		<%= link_to "Back", :back, class: "btn btn-outline-secondary"%>
+		<%= link_to "Back", articles_path, class: "btn btn-outline-secondary"%>
 	</div>
 <% end %>
