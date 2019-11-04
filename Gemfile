@@ -42,6 +42,7 @@ group :development, :test do
 
   # For learning tests
   gem 'rspec-rails', '~> 3.8'
+  gem 'shoulda-matchers'
 
 end
 
