@@ -1,0 +1,18 @@
+C:/Ruby25-x64/bin/ruby.exe -I'C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.9.0/lib';'C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-support-3.9.0/lib' 'C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.9.0/exe/rspec' --pattern 'spec/**{,/*/**}/*_spec.rb'
+
+An error occurred while loading ./spec/models/contact_spec.rb.
+Failure/Error:
+  describe Contact do
+  	it { should validate_presence_of :email }
+  	it { should validate_presence_of :message }	
+  end
+
+NameError:
+  uninitialized constant Contact
+# ./spec/models/contact_spec.rb:3:in `<top (required)>'
+No examples found.
+
+
+Finished in 0 seconds (files took 0.54803 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+

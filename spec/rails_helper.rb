@@ -61,3 +61,14 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+# Assuming you are testing a Rails app, simply place this at the bottom of
+# spec/rails_helper.rb (or in a support file if you so choose):
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
+
