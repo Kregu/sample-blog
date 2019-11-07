@@ -13,9 +13,9 @@ describe Article do
 	describe "#subject" do
 		it "return the article title" do
 
-			user = build(:user, username: "Joe", id: "1")
+			user = create(:user, username: "Joe")
 			# create object article
-			article = create(:article, title: 'Lorem Ipsum', user_id: "1")
+			article = create(:article, title: 'Lorem Ipsum')
 
 			# assert
 			expect(article.subject).to eq 'Lorem Ipsum'
