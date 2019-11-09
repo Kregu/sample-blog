@@ -8,7 +8,7 @@ describe Article do
 		it { should validate_length_of(:text).is_at_least(5).is_at_most(4000)}	
 	end
 
-	describe "associacions" do
+	describe "associations" do
 		it { should have_many :comments }
 	end
 
