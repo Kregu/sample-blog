@@ -56,7 +56,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.1, >= 2.1.8)
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (9.7.1)
       execjs
@@ -133,7 +133,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     popper_js (1.14.5)
-    public_suffix (4.0.1)
+    public_suffix (4.0.6)
     puma (3.12.1)
     rack (2.0.7)
     rack-proxy (0.6.5)
@@ -243,7 +243,6 @@ GEM
       tzinfo (>= 1.0.0)
     warden (1.2.8)
       rack (>= 2.0.6)
-    wdm (0.1.1)
     web-console (4.0.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -290,7 +289,6 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
-  wdm (>= 0.1.0)
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
