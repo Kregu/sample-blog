@@ -4,8 +4,8 @@
 <!-- For resource has assotiation defined use 'form_for([@document, @comment]) do |f|'
 @article.comments.build return new object of the collection, but has not been saved -->
 
-<h3>Add a comment:</h3>
-<%= render 'comments/form' %>
-
-<h3>Comments:</h3><br>
+<h3>Comments</h3><br>
 <%= render @article.comments %>
+
+<h3>Add a comment</h3>
+<%= render 'comments/form' %>
