@@ -1,11 +1,13 @@
 <%= form_with(model: [@article, @article.comments.build]) do |f| %>
 	<p>
-		<%= f.label :comment %><br>
+<!--		<%#= f.label :comment %><br>-->
 		<%= f.text_area :body, class: "form-control" %>
 	</p>
+  <br>
 	<p>
 		<%= f.submit class: "btn btn-primary"%>
 		<%= link_to "Back", articles_path, class: "btn btn-outline-secondary"%>
 	</p>
+  <br>
 
 <% end %>

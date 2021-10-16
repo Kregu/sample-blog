@@ -1,10 +1,12 @@
 <p><%= comment.body %></p>
 
-<p><span style="font-size: 75%; color: 999">
-Added at <%= comment.created_at%> by <%= comment.author %>
+<p><span style="font-size: 75%; color: #2F4F4F">
+  <% if comment.body %>
+  Added at <%= comment.created_at%> by <%= comment.author %>
 
-	<%= link_to 'Delete', [comment.article, comment],
-				method: :delete,
-				data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Delete', [comment.article, comment],
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
+    <% end %>
 </span></p>
 <hr>
