@@ -37,3 +37,9 @@ yarn-debug.log*
 package-lock.json
 yarn.lock
 yarn.lock
+.idea/misc.xml
+.idea/vcs.xml
+.idea/.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/sample-blog.iml
