@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   before_action :set_article, only: [:create, :destroy]
 
   def create
-    comment = @article.comments.create(author: current_user.username, body: comment_params[:body])
+    @article.comments.create(author: current_user.username, body: comment_params[:body])
     redirect_to article_path(@article)
   end
 
