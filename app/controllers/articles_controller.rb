@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @articles = Article.all
     @users = User.all
@@ -11,8 +11,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def show
-  end
+  def show; end
 
   def create
     @article = Article.new(article_params)
@@ -25,14 +24,13 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @article.update(article_params)
       redirect_to @article, success: 'Article updated successfully'
     else
-      render :edit, danger: 'Article not udated'
+      render :edit, danger: 'Article not updated'
     end
   end
 
@@ -48,7 +46,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_article
-     @article = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
 end
