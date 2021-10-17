@@ -4,9 +4,11 @@
   <% if comment.body %>
   <%= comment.author %> said at <%= comment.created_at%>
 
+    <% if user_signed_in? && comment.author == current_user.username  %>
     <%= link_to 'Delete', [comment.article, comment],
           method: :delete,
           data: { confirm: 'Are you sure?' } %>
+      <%end %>
     <% end %>
 </span></p>
 
