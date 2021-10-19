@@ -25,10 +25,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 5.1.0'
 
 # Bootstrap JavaScript depends on jQuery.
-gem 'jquery-rails'
+# gem 'jquery-rails'
+
+gem 'popper_js', '>=2.9.3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
