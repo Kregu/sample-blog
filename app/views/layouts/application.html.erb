@@ -16,42 +16,7 @@
 
 
   <body>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Blog</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/terms">Terms</a>
-          </li>
-          <%if user_signed_in?%>
-            <li class="nav-item">
-              <%= link_to "Create Article", new_article_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link"%>
-            </li>
-          <%else%>
-            <li class="nav-item">
-              <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
-            </li>
-          <%end%>
-        </ul>
-          <div class="navbar-text">
-            <%if user_signed_in?%>
-              <a class="nav-link" href="/">Hello, <%= current_user.username%>!</a>
-            <%end%>
-          </div>
-      </div>
-    </nav>
+    <%= render "layouts/navbar" %>
 
     <div class="container">
       <div class="row">
