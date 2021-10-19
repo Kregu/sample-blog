@@ -2,14 +2,14 @@ class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
   belongs_to :user
 
-  validates :title, presence: true, length: {maximum: 140}
-  validates :text, presence: true, length: {in: 5..4000}
+  validates :title, presence: true, length: { maximum: 140 }
+  validates :text, presence: true, length: { in: 5..4000 }
 
   def subject
-  	title
+    title
   end
 
   def last_comment
-  	comments.last
+    comments.last
   end
 end
