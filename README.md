@@ -1,24 +1,10 @@
-# README
+# Hi
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+git clone https://github.com/Kregu/sample-blog.git
 
-Things you may want to cover:
+cd sample-blog
 
-* Ruby version
+bundle install
 
-* System dependencies
+rails s
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
