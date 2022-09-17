@@ -10,7 +10,7 @@
     "bootstrap": "^5.0.0-beta3",
     "jquery": "^3.6.0",
     "turbolinks": "^5.2.0",
-    "ungit": "^1.4.47"
+    "ungit": "^1.5.20"
   },
   "version": "0.1.0",
   "devDependencies": {
